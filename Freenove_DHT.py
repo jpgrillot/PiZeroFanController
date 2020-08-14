@@ -15,7 +15,7 @@ class DHT(object):
     DHTLIB_INVALID_VALUE = -999
     
     DHTLIB_DHT11_WAKEUP = 0.020#0.018       #18ms
-    DHTLIB_TIMEOUT = 0.0001         #100us
+    DHTLIB_TIMEOUT = 0.020#0.018         #18ms
     
     humidity = 0
     temperature = 0
