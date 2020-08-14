@@ -14,9 +14,8 @@ TempMin = 20
 dht = DHT.DHT(DHTPin)
 
 GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
 FanPin = 21
-GPIO.setup(FAN_PIN, GPIO.OUT)
+GPIO.setup(FanPin, GPIO.OUT)
 
 while True:
     time.sleep(1)
@@ -27,7 +26,7 @@ while True:
     print("Temp: %.2f "%(dht.temperature))
     
     #Control the fan based on the Temp
-    if(dht.temperature > TempThreshhold):
+    if(dht.temperature > TempThreshold):
         GPIO.output(FanPin, True)
     if(dht.temperature < TempMin):
         GPIO.output(FanPin, False)
